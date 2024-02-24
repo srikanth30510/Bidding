@@ -1,0 +1,54 @@
+<html>
+                          <head>
+                                   <style>
+                                   form{
+                                   background-color: aqua;
+                                   width: 550px;
+                                   height:300px;
+                                   border-radius:2em;
+                                   
+                                   }
+                                   body{
+                                   background-color:#ffff99;
+                                   }
+                                   </style>
+                          </head>
+                          <body>
+                          
+                          <center>
+                          <br><br><br><br><br>
+                                 <form action="UserServlet" method="get">
+                                 <br>
+                                 <br>
+                                 
+                                 <h1>Login Portal
+                                 </h1>
+                                        UserName: <input type="text" name="uname"> <br>
+                                        <br>
+                                        
+                                        Password : <input type="password" name="pwd"><br>
+                                        <br>
+                                        
+                                        <input type="submit" value="Login">
+                                        <br>
+                                           <br>
+                                           <p>Not Registered click here<a href="signup.html">Register</a></p>
+                                 </form>
+                                  <div id="footer"></div>
+                                 </center>
+                                 <script>
+                                 // Function to include HTML files using Fetch API
+                                 function includeHTML(file, elementId) {
+                                   fetch(file)
+                                     .then(response => response.text())
+                                     .then(html => {
+                                       document.getElementById(elementId).innerHTML = html;
+                                     })};
+
+                                 // Include the header and footer
+                                 includeHTML('header.html', 'header');
+                                 includeHTML('footer.html', 'footer');
+                               </script>
+                                 
+                         </body>
+                   </html>

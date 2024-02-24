@@ -1,0 +1,57 @@
+<html>
+                          <head>
+                                   <style>
+                                   form{
+                                   background-color: aqua;
+                                   width: 550px;
+                                   height:370px;
+                                   border-radius:2em;
+                                   
+                                   }
+                                   body{
+                                   background-color:#ffff99;
+                                   }
+                                   </style>
+                          </head>
+                          <body>
+                          
+                          <center>
+                          <h1>Bidding System</h1>
+                                 <form action="" method="get">
+                                 <br>
+                                 <br>
+                                 
+                                 <h1>Login Portal
+                                 </h1>
+                                        UserName: <input type="text" name="uname"> <br>
+                                        <br>
+                                        Email:<input type="email" name="email">
+                                        <br>
+                                        <br>
+                                        Password : <input type="password" name="pwd"><br>
+                                        <br>
+                                        Renter Password:<input type="password" name="pwd2"><br>
+                                        <br>
+                                        <p>If already have account?<a href="Login.html">Sign in</a></p>
+                                        <input type="submit" value="Sign up">
+                                        <br>
+                                           <br>
+                                 </form>
+                                  <div id="footer"></div>
+                                 </center>
+                                 <script>
+                                 // Function to include HTML files using Fetch API
+                                 function includeHTML(file, elementId) {
+                                   fetch(file)
+                                     .then(response => response.text())
+                                     .then(html => {
+                                       document.getElementById(elementId).innerHTML = html;
+                                     })};
+
+                                 // Include the header and footer
+                                 includeHTML('header.html', 'header');
+                                 includeHTML('footer.html', 'footer');
+                               </script>
+                                 
+                         </body>
+                   </html>
